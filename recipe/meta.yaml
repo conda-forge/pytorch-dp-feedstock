@@ -1,5 +1,5 @@
 {% set name = "pytorch-dp" %}
-{% set version = "0.1b1" %}
+{% set version = "0.9.0" %}
 {% set version_long = "0.1-beta.1" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/facebookresearch/{{ name }}/archive/v{{ version_long }}.tar.gz
-  sha256: 77f01cb86183e55c402bdaa05aa52542418c5bea1cfa3f68fabc981c9e1680be
+  sha256: 337d199abbaaacf576c0d952c094393cd69eacd924f0d9d18d5346eabd150c27
 
 build:
   number: 0
