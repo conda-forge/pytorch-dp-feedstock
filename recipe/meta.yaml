@@ -22,11 +22,11 @@ requirements:
     - python >=3.6
     - torchvision
     - scipy
+    - torch
+    - numpy
 
 test:
   imports:
-    - torchdp
-  requires:
     - torchdp
 
 about:
