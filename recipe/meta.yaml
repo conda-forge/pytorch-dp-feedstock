@@ -16,15 +16,17 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - torchvision
     - scipy
 
 test:
   imports:
+    - torchdp
+  requires:
     - torchdp
 
 about:
