@@ -27,7 +27,7 @@ requirements:
 
 test:
   imports:
-    - torchdp
+    - opacus
 
 about:
   home: https://github.com/facebookresearch/pytorch-dp
