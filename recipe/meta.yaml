@@ -1,32 +1,33 @@
 {% set name = "pytorch-dp" %}
-{% set version = "0.9.0" %}
-{% set version_long = "0.1-beta.1" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/facebookresearch/{{ name }}/archive/v{{ version_long }}.tar.gz
-  sha256: 337d199abbaaacf576c0d952c094393cd69eacd924f0d9d18d5346eabd150c27
+  url: https://github.com/pytorch/opacus/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 413504a60822c27bd67f9d53caabaef1a8fd80fb5c0d661c88334559f04a5f61
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - torchvision
+    - pytorch
     - scipy
+    - numpy
 
 test:
   imports:
-    - torchdp
+    - opacus
 
 about:
   home: https://github.com/facebookresearch/pytorch-dp
@@ -44,6 +45,5 @@ about:
 extra:
   recipe-maintainers:
     - mxr-conda
-    - ndmaxar
-    - rluria14
+    - JennaLipscomb
     - oblute
