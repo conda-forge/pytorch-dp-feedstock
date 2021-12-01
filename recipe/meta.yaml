@@ -1,5 +1,5 @@
 {% set name = "pytorch-dp" %}
-{% set version = "0.14.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pytorch/opacus/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 413504a60822c27bd67f9d53caabaef1a8fd80fb5c0d661c88334559f04a5f61
+  sha256: 5f4d319ab03c3e7c485ac0a3b98000bb8666f7d4e938d811a5ba390a2a440462
 
 build:
   number: 0
