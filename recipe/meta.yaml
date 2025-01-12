@@ -10,22 +10,24 @@ source:
   sha256: 5b3115ef8c7e9b265875eea8642f7e03de225d4cd93a10cf5aa552fd183bf3ce
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - torchvision
     - pytorch
     - scipy
     - numpy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - opacus
 
